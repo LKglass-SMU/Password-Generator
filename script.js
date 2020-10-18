@@ -6,7 +6,6 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var specialChar = "!@#$%^&*()_-+=;/?.,><";
 var numbers = "1234567890";
 
-//on event click with which function to run
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -18,7 +17,7 @@ function generatePassword() {
   var passwordLength = prompt(
     "Please choose password length, must be between 8 and 128 characters"
   );
-  //continue to check for correct password option
+    //if user does not use interger between 8-128 alert them
   while (
     isNaN(passwordLength) ||
     parseInt(passwordLength) < 8 ||
@@ -29,7 +28,8 @@ function generatePassword() {
       "Please choose password length, must be between 8 and 128 characters"
     );
   }
-  //once user enters correct number info
+  //once user enters correct integer confirm other options
+  //confirm option y/n to be added to password
   var hasSpecialCharacters = confirm(
     "Do you want your password to contain special characters?"
   );
